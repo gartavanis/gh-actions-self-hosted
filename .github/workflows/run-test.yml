@@ -6,4 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run tests 
-        run: hostname && python test.py
+        run: salloc -N 1 -n 1 -t 0:10:00 ./test.py
